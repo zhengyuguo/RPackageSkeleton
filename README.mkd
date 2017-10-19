@@ -1,0 +1,22 @@
+# Create `R_src`
+- Create the directory `R_src`.
+- For each function create a directory named as the function, like `R_src/f1/` and `R_src/f2/`.
+- Put the main R functions in that directories, i.e.`R_src/f1/f1.R` and `R_src/f2/f2.R`.
+- Create the directory `main/` in each function directory, like `R_src/f1/main/` and `R_src/f2/main/`.
+- In each `main/` directory create an R script. Its name should be `main.R`. (`R_src/f1/main/main.R` and `R_src/f2/main/main.R`)
+- Each `main.R` includes a minimum example for its function. As an example, the following script is for the function `f1.R`:
+
+~~~
+source('../f1.R')
+f1(1,2)
+~~~
+
+# Link `*.R` files to `R/`
+- Please put the file `.export` in your main functions directories.
+- Run the bash script `link.sh` before installation.
+
+# `roxygen`
+The library `roxygen2` should be installed. Then, run the bash script `roxygenize.sh` to install the package.
+
+# Install package
+Run the bash script `install.sh` to install the package.
